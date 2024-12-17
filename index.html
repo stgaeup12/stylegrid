@@ -14,17 +14,87 @@
     <link rel="stylesheet" href="css/style.css">
     <title>StyleGrid - Home</title>
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "le2tleP42BWTP9iTR",
-      });
-   })();
-</script>
-<script src="script.js"></script>
+    <script src="js/vendor/fslightbox.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const cardButton1 = document.getElementById("card-button-1");
+            const cardButton2 = document.getElementById("card-button-2");
+            const cardButton3 = document.getElementById("card-button-3");
+            const cardButton4 = document.getElementById("card-button-4");
+            
+            cardButton1.addEventListener("click", function () {
+                document.getElementById("card-title").innerText = "CUSTOM INTERIOR DESIGNS";
+                document.getElementById("card-description").innerText = "Our designs combine modern aesthetics with timeless elegance, creating spaces that are both sophisticated and functional. We focus on every detail to ensure your space reflects the latest trends while maintaining a sense of classic beauty, offering you a perfect blend of style and practicality.";
+                document.getElementById("card-button").setAttribute("href","interior design.html");
+                
+                cardButton1.style.backgroundColor = "#1d1d1d"
+                cardButton2.style.backgroundColor = "white"
+                cardButton3.style.backgroundColor = "white"
+                cardButton4.style.backgroundColor = "white"
+
+                cardButton1.style.color = "white"
+                cardButton2.style.color = "#1d1d1d"
+                cardButton3.style.color = "#1d1d1d"
+                cardButton4.style.color = "#1d1d1d"
+
+            })
+
+            cardButton2.addEventListener("click", function () {
+                document.getElementById("card-title").innerText = "UPVC WINDOWS & DOORS";
+                document.getElementById("card-description").innerText = "Upgrade your spaces with high-quality UPVC windows and doors, combining durability, energy efficiency, and modern aesthetics. Tailored to your style and needs, they provide excellent insulation, low maintenance, and long-lasting performance with expert installation.";
+                document.getElementById("card-button").setAttribute("href","upvc.html");
+                cardButton1.style.backgroundColor = "white"
+                cardButton2.style.backgroundColor = "#1d1d1d"
+                cardButton3.style.backgroundColor = "white"
+                cardButton4.style.backgroundColor = "white"
+
+                cardButton1.style.color = "#1d1d1d"
+                cardButton2.style.color = "white"
+                cardButton3.style.color = "#1d1d1d"
+                cardButton4.style.color = "#1d1d1d"
+            })
+            cardButton3.addEventListener("click", function () {
+                document.getElementById("card-title").innerText = "BESPOKE FURNITURE";
+                document.getElementById("card-description").innerText = "Elevate your interiors with custom-crafted furniture designed to match your unique style and needs. Combining premium materials, expert craftsmanship, and attention to detail, we create functional and elegant pieces. Each design is tailored to enhance your space, ensuring durability, comfort, and timeless appeal.";
+                document.getElementById("card-button").setAttribute("href","furniture.html");
+                cardButton1.style.backgroundColor = "white"
+                cardButton2.style.backgroundColor = "white"
+                cardButton3.style.backgroundColor = "#1d1d1d"
+                cardButton4.style.backgroundColor = "white"
+
+                cardButton1.style.color = "#1d1d1d"
+                cardButton2.style.color = "#1d1d1d"
+                cardButton3.style.color = "white"
+                cardButton4.style.color = "#1d1d1d"
+            })
+            cardButton4.addEventListener("click", function () {
+                document.getElementById("card-title").innerText = "GLASS & STEEL FABRICATION";
+                document.getElementById("card-description").innerText = "Transform your spaces with precision-engineered glass and steel fabrication services. Combining strength, durability, and sleek aesthetics, we create bespoke solutions tailored to your needs. From modern railings to elegant partitions, our designs enhance functionality while adding sophistication to any space.";
+                document.getElementById("card-button").setAttribute("href","glass.html")
+                cardButton1.style.backgroundColor = "white"
+                cardButton2.style.backgroundColor = "white"
+                cardButton3.style.backgroundColor = "white"
+                cardButton4.style.backgroundColor = "#1d1d1d"
+
+                cardButton1.style.color = "#1d1d1d"
+                cardButton2.style.color = "#1d1d1d"
+                cardButton3.style.color = "#1d1d1d"
+                cardButton4.style.color = "white"
+            })
+        });
+
+    </script>
+    <script type="text/javascript">
+
+        (function () {
+            emailjs.init({
+                publicKey: "le2tleP42BWTP9iTR",
+            });
+        })();
+    </script>
+    <script src="script.js"></script>
 </head>
 
 <body id="top">
@@ -44,7 +114,7 @@
                 <div class="d-flex flex-lg-row flex-column align-items-center gap-3">
                     <div class="d-flex flex-row gap-3  align-items-center">
                         <i class="fa-solid fa-location-dot accent-color fs-4"></i>
-                        <span class="text-white">Eskort Colony, G. B. Nagar, U.P.</span>
+                        <span class="text-white">Escort Colony, G. B. Nagar, U.P.</span>
                     </div>
                     <div class="d-flex flex-row gap-3  align-items-center">
                         <i class="fa-solid fa-phone accent-color fs-4"></i>
@@ -81,7 +151,7 @@
                                     ABOUT
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="about_us.html">ABOUT US</a></li>                                   
+                                    <li><a class="dropdown-item" href="about_us.html">ABOUT US</a></li>
                                     <li><a class="dropdown-item" href="team.html">OUR TEAM</a></li>
                                 </ul>
                             </li>
@@ -91,12 +161,17 @@
                                     SERVICES
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="services.html">SERVICES</a></li>
-                                    <li><a class="dropdown-item" href="pricing.html">PRICING</a></li>
+                                    <li><a class="dropdown-item" href="interior design.html">INTERIOR DESIGN</a></li>
+                                    <li><a class="dropdown-item" href="upvc.html">WINDOWS & DOORS</a></li>
+                                    <li><a class="dropdown-item" href="furniture.html">BESPOKE FURNITURE</a></li>
+                                    <li><a class="dropdown-item" href="glass.html">GLASS & STEEL</a></li>                                  
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="project.html">PROJECT</a>                               
+                                <a class="nav-link" href="project.html">PROJECT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">PRICING</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">CONTACT</a>
@@ -137,17 +212,23 @@
                             <h5 class="accent-color font-1 fw-semibold">WELCOME TO STYLEGRID</h5>
                             <h3 class="text-black font-2 fw-semibold">INTERIOR DESIGN</h3>
                             <p class="text-gray font-1">
-                            At Stylegrid, we blend creativity and craftsmanship to redefine interiors. 
-                            From bespoke furniture to precision steel and glass installations, our designs elevate your space.
-                               
+                                At Stylegrid, we blend creativity and craftsmanship to redefine interiors.
+                                From bespoke furniture to precision steel and glass installations, our designs elevate
+                                your space.
+
                             </p>
                             <h5 class="font-1 fw-semibold accent-color">UNIQUE DESIGNS</h5>
                             <p class="text-gray font-1">
-                                Our designs are crafted to be one-of-a-kind, reflecting your personal style and the distinct character of your space. We combine creativity with precision to deliver interiors that are not only visually stunning but also functional and timeless.
+                                Our designs are crafted to be one-of-a-kind, reflecting your personal style and the
+                                distinct character of your space. We combine creativity with precision to deliver
+                                interiors that are not only visually stunning but also functional and timeless.
                             </p>
                             <h5 class="font-1 fw-semibold accent-color">TAILORED SOLUTIONS</h5>
                             <p class="text-gray font-1">
-                                Every project is unique, and so are our solutions. We carefully assess your needs, preferences, and space to deliver customized designs that seamlessly blend form and function. Our goal is to create environments that are as practical as they are beautiful, tailored specifically for you.
+                                Every project is unique, and so are our solutions. We carefully assess your needs,
+                                preferences, and space to deliver customized designs that seamlessly blend form and
+                                function. Our goal is to create environments that are as practical as they are
+                                beautiful, tailored specifically for you.
                             </p>
                         </div>
                     </div>
@@ -214,10 +295,13 @@
                             <h5 class="accent-color font-1 fw-semibold">CRAFTING SPACES THAT INSPIRE</h5>
                             <h3 class="text-black font-2 fw-semibold">DESIGNS THAT TRANSFORM LIVING</h3>
                             <p class="text-gray font-1">
-                                Our approach combines creativity and innovation to deliver designs that are both stylish and unique. We focus on crafting spaces that reflect your personality while ensuring functionality and comfort. With attention to every detail, we transform ordinary spaces into extraordinary environments that leave a lasting impression.
+                                Our approach combines creativity and innovation to deliver designs that are both stylish
+                                and unique. We focus on crafting spaces that reflect your personality while ensuring
+                                functionality and comfort. With attention to every detail, we transform ordinary spaces
+                                into extraordinary environments that leave a lasting impression.
                             </p>
                             <div>
-                                <a href=" " type="button"
+                                <a href="interior design.html" type="button"
                                     class="btn rounded-0 bg-dark-color bg-accent-color-hover text-white">READ MORE</a>
                             </div>
                         </div>
@@ -234,7 +318,9 @@
                             <h5 class="accent-color font-1 fw-semibold">OUR STATISTIC</h5>
                             <h3 class="text-black font-2 fw-semibold">MAKE A STYLE STATEMENT</h3>
                             <p class="text-gray font-1">
-                                Create an environment that reflects your personality with bold, creative designs. Our approach combines modern aesthetics with practical solutions to transform your space into a statement of style and sophistication.
+                                Create an environment that reflects your personality with bold, creative designs. Our
+                                approach combines modern aesthetics with practical solutions to transform your space
+                                into a statement of style and sophistication.
                             </p>
                             <div class="d-flex flex-column gap-4">
                                 <div class="r-progress w-100" style="--value:95;">
@@ -292,31 +378,32 @@
                     <div class="col mb-3">
                         <div class="row row-cols-1 row-cols-lg-2">
                             <div class="col mb-3">
-                                <div
-                                    class="bg-dark-color d-flex flex-column text-center gap-3 justify-content-center align-items-center py-5 px-4">
+                                <div id="card-button-1"
+                                style="color: white; background-color: #1d1d1d;"
+                                class="bg-dark-hover border border-light border-2 d-flex flex-column text-center gap-3 justify-content-center align-items-center py-5 px-4">
                                     <div style="max-width: 50px;">
                                         <img src="image/icon-1.png" alt="" class="img-fluid">
                                     </div>
-                                    <div class="text-white font-1">
+                                    <div class="text font-1">
                                         <h5>CUSTOM INTERIOR DESIGN</h5>
-                                        <p>Tailored Interior Designs to Fit Your Lifestyle Needs</p>
+                                        <p>Tailored Interior Designs to Fit Your Unique Lifestyle Needs</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col mb-3">
-                                <div
+                                <div id="card-button-2"
                                     class="bg-dark-hover border border-light border-2 d-flex flex-column text-center gap-3 justify-content-center align-items-center py-5 px-4">
                                     <div style="max-width: 50px;">
                                         <img src="image/icon-2.png" alt="" class="img-fluid">
                                     </div>
                                     <div class="font-1">
-                                        <h5>UPVC WINDOWS & DOORS</h5>
+                                        <h5 id="upvc-title">UPVC WINDOWS & DOORS</h5>
                                         <p>Energy-efficient UPVC Windows and Doors for Durability</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col mb-3">
-                                <div
+                                <div id="card-button-3"
                                     class="bg-dark-hover border border-light border-2 d-flex flex-column text-center gap-3 justify-content-center align-items-center py-5 px-4">
                                     <div style="max-width: 50px;">
                                         <img src="image/icon-3.png" alt="" class="img-fluid">
@@ -328,7 +415,7 @@
                                 </div>
                             </div>
                             <div class="col mb-3">
-                                <div
+                                <div id="card-button-4"
                                     class="bg-dark-hover border border-light border-2 d-flex flex-column text-center gap-3 justify-content-center align-items-center py-5 px-4">
                                     <div style="max-width: 50px;">
                                         <img src="image/icon-4.png" alt="" class="img-fluid">
@@ -344,12 +431,15 @@
                     <div class="col mb-3">
                         <div class="d-flex flex-column gap-3 p-3">
                             <h5 class="accent-color font-1 fw-semibold">OUR SERVICE</h5>
-                            <h3 class="text-black font-2 fw-semibold">WE DESIGN MODREN AND ELEGANT</h3>
-                            <p class="text-gray font-1">
-                                Our designs combine modern aesthetics with timeless elegance, creating spaces that are both sophisticated and functional. We focus on every detail to ensure your space reflects the latest trends while maintaining a sense of classic beauty, offering you a perfect blend of style and practicality.
+                            <h3 id="card-title" class="text-black font-2 fw-semibold">CUSTOM INTERIOR DESIGNS</h3>
+                            <p id="card-description" class="text-gray font-1">
+                                Our designs combine modern aesthetics with timeless elegance, creating spaces that are
+                                both sophisticated and functional. We focus on every detail to ensure your space
+                                reflects the latest trends while maintaining a sense of classic beauty, offering you a
+                                perfect blend of style and practicality.
                             </p>
                             <div>
-                                <a href=" " type="button"
+                                <a id="card-button" href="interior design.html" type="button"
                                     class="btn rounded-0 bg-dark-color bg-accent-color-hover text-white">READ MORE</a>
                             </div>
                         </div>
@@ -364,18 +454,21 @@
                     <h5 class="accent-color font-1 fw-semibold">VIEW OUR PROJECTS</h5>
                     <h3 class="text-black font-2 fw-semibold">OUR LATEST PROJECT</h3>
                     <p class="text-gray font-1">
-                        Discover our latest projects, where creativity and functionality come together seamlessly. We are proud to showcase the transformation of each space, blending modern design with timeless elegance. Each project reflects our commitment to quality, precision, and a deep understanding of our clients' needs. We create environments that inspire, enhance well-being, and offer lasting value.
+                        Discover our latest projects, where creativity and functionality come together seamlessly. We
+                        are proud to showcase the transformation of each space, blending modern design with timeless
+                        elegance. Each project reflects our commitment to quality, precision, and a deep understanding
+                        of our clients' needs. We create environments that inspire, enhance well-being, and offer
+                        lasting value.
                     <div class="row row-cols-1 row-cols-lg-2">
                         <div class="col mb-3">
                             <div class="overlay-card" style="background-image: url(image/dummy-img-600x700.jpg);">
                                 <div class="overlay-body gap-3">
-                                    <a href="image/dummy-img-600x700.jpg" data-fslightbox="gallery-2" type="button"
-                                        class="btn-outline-circle p-0">
-                                        <i class="fa-solid fa-plus"></i>
+                                    <a href="image/dummy-img-600x700.jpg"></i>
                                     </a>
                                     <h5 class="text-white fw-semibold font-2">RESIDENTIAL DESIGN</h5>
                                     <div>
-                                        <a href=" " type="button" class="btn rounded-0 btn-accent-light fw-bold font-1">SEE MORE</a>
+                                        <a href="resident.html" type="button"
+                                            class="btn rounded-0 btn-accent-light fw-bold font-1">KNOW MORE</a>
                                     </div>
                                 </div>
                             </div>
@@ -383,46 +476,43 @@
                         <div class="col mb-3">
                             <div class="d-flex gap-3 flex-lg-row flex-column">
                                 <div class="accordion-image">
-                                    <div class="overlay-card" style="background-image: url(image/dummy-img-600x700-1.jpg);">
+                                    <div class="overlay-card"
+                                        style="background-image: url(image/dummy-img-600x700-1.jpg);">
                                         <div class="overlay-body gap-3">
-                                            <a href="image/dummy-img-600x700-1.jpg" data-fslightbox="gallery-2"
-                                                type="button" class="btn-outline-circle p-0">
-                                                <i class="fa-solid fa-plus"></i>
+                                            <a href="image/dummy-img-600x700-1.jpg"></i>
                                             </a>
                                             <h5 class="text-white fw-semibold font-2">CORPORATE DESIGN</h5>
                                             <div>
-                                                <a href=" " type="button"
-                                                    class="btn rounded-0 btn-accent-light fw-bold font-1">SEE MORE</a>
+                                                <a href="corporate.html" type="button"
+                                                    class="btn rounded-0 btn-accent-light fw-bold font-1">KNOW MORE</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-image">
-                                    <div class="overlay-card" style="background-image: url(image/dummy-img-600x700-2.jpg);">
+                                    <div class="overlay-card"
+                                        style="background-image: url(image/dummy-img-600x700-2.jpg);">
                                         <div class="overlay-body gap-3">
-                                            <a href="image/dummy-img-600x700-2.jpg" data-fslightbox="gallery-2"
-                                                type="button" class="btn-outline-circle p-0">
-                                                <i class="fa-solid fa-plus"></i>
+                                            <a href="image/dummy-img-600x700-2.jpg"></i>
                                             </a>
                                             <h5 class="text-white fw-semibold font-2">RESTAURANT DESIGN</h5>
                                             <div>
                                                 <a href=" " type="button"
-                                                    class="btn rounded-0 btn-accent-light fw-bold font-1">SEE MORE</a>
+                                                    class="btn rounded-0 btn-accent-light fw-bold font-1">KNOW MORE</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-image">
-                                    <div class="overlay-card" style="background-image: url(image/dummy-img-600x700-3.jpg);">
+                                    <div class="overlay-card"
+                                        style="background-image: url(image/dummy-img-600x700-3.jpg);">
                                         <div class="overlay-body gap-3">
-                                            <a href="image/dummy-img-600x700-3.jpg" data-fslightbox="gallery-2"
-                                                type="button" class="btn-outline-circle p-0">
-                                                <i class="fa-solid fa-plus"></i>
+                                            <a href="image/dummy-img-600x700-3.jpg"></i>
                                             </a>
                                             <h5 class="text-white fw-semibold font-2">COMMERCIAL DESIGN</h5>
                                             <div>
                                                 <a href=" " type="button"
-                                                    class="btn rounded-0 btn-accent-light fw-bold font-1">SEE MORE</a>
+                                                    class="btn rounded-0 btn-accent-light fw-bold font-1">KNOW MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -443,7 +533,8 @@
                         <h5 class="accent-color font-1 fw-semibold">GETTING IT RIGHT</h5>
                         <h3 class="text-white font-2 fw-semibold">RELENTLES PURSUIT OF PERFECTION</h3>
                         <div>
-                            <a href="contact.html" type="button" class="btn rounded-0 btn-accent-dark text-white">CONTACT NOW</a>
+                            <a href="contact.html" type="button"
+                                class="btn rounded-0 btn-accent-dark text-white">CONTACT NOW</a>
                         </div>
                     </div>
                 </div>
@@ -458,7 +549,9 @@
                             <h5 class="accent-color font-1 fw-semibold">HOW DO WE WORK ?</h5>
                             <h3 class="text-black font-2 fw-semibold">WE DESIGN FOR YOUR SATISFACTION</h3>
                             <p class="text-gray font-1">
-                                Our designs focus on your needs and vision, ensuring every space exceeds your expectations. With attention to detail and quality, we create environments that bring both style and functionality.
+                                Our designs focus on your needs and vision, ensuring every space exceeds your
+                                expectations. With attention to detail and quality, we create environments that bring
+                                both style and functionality.
                             </p>
                             <div class="d-flex flex-column">
                                 <div class="d-flex flex-row gap-3 align-items-center border-bottom py-3">
@@ -475,7 +568,8 @@
                                     <div class="d-flex flex-column ps-5">
                                         <h6 class="text-black font-1">DESING</h6>
                                         <p class="text-gray">
-                                            Transforming concepts into functional, aesthetically pleasing designs with precision.
+                                            Transforming concepts into functional, aesthetically pleasing designs with
+                                            precision.
                                         </p>
                                     </div>
                                 </div>
@@ -499,7 +593,8 @@
                                         <img src="image/dummy-img-600x400.jpg" class="img-fluid" alt="...">
                                         <div class="card-body shadow text-center p-4">
                                             <h5 class="accent-color font-1">RESIDENTIAL</h5>
-                                            <p class="text-gray font-1">Elegant, functional spaces for modern living.</p>
+                                            <p class="text-gray font-1">Elegant, functional spaces for modern living.
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="card bg-transparent">
@@ -545,7 +640,9 @@
                             <h5 class="accent-color font-1 fw-semibold">OUR TESTIMONIAL</h5>
                             <h4 class="text-black font-2 fw-semibold">WHAT OUR CLIENT SAY ?</h4>
                             <p class="text-gray font-1">
-                                Our clients appreciate our attention to detail, creative designs, and commitment to delivering spaces that exceed expectations. Their satisfaction is a reflection of our dedication to quality and innovation.
+                                Our clients appreciate our attention to detail, creative designs, and commitment to
+                                delivering spaces that exceed expectations. Their satisfaction is a reflection of our
+                                dedication to quality and innovation.
                             </p>
                             <div class="w-100 overflow-hidden">
                                 <!-- Slider main container -->
@@ -559,7 +656,8 @@
                                                     <div class="col mb-3">
                                                         <div class="d-flex flex-column justify-content-center h-100">
                                                             <p class="text-gray font-1">
-                                                               " Stylegrid transformed my space into a functional masterpiece! "
+                                                                " Stylegrid transformed my space into a functional
+                                                                masterpiece! "
                                                             </p>
                                                             <div class="divider mb-4"></div>
                                                             <div class="d-flex flex-column">
@@ -580,7 +678,8 @@
                                                     <div class="col mb-3">
                                                         <div class="d-flex flex-column justify-content-center h-100">
                                                             <p class="text-gray font-1">
-                                                                " Incredible design and attention to detail. Highly recommend! "
+                                                                " Incredible design and attention to detail. Highly
+                                                                recommend! "
                                                             </p>
                                                             <div class="divider mb-4"></div>
                                                             <div class="d-flex flex-column">
@@ -601,7 +700,8 @@
                                                     <div class="col mb-3">
                                                         <div class="d-flex flex-column justify-content-center h-100">
                                                             <p class="text-gray font-1">
-                                                                " Professional, creative, and exactly what I envisioned. Love it! "
+                                                                " Professional, creative, and exactly what I envisioned.
+                                                                Love it! "
                                                             </p>
                                                             <div class="divider mb-4"></div>
                                                             <div class="d-flex flex-column">
@@ -638,7 +738,8 @@
                                                     <div class="col mb-3">
                                                         <div class="d-flex flex-column justify-content-center h-100">
                                                             <p class="text-gray font-1">
-                                                                " Exceeds expectations every time! Truly a pleasure to work with. "
+                                                                " Exceeds expectations every time! Truly a pleasure to
+                                                                work with. "
                                                             </p>
                                                             <div class="divider mb-4"></div>
                                                             <div class="d-flex flex-column">
@@ -659,7 +760,8 @@
                                                     <div class="col mb-3">
                                                         <div class="d-flex flex-column justify-content-center h-100">
                                                             <p class="text-gray font-1">
-                                                                " Amazing service, amazing design—turned my dream into reality! "
+                                                                " Amazing service, amazing design—turned my dream into
+                                                                reality! "
                                                             </p>
                                                             <div class="divider mb-4"></div>
                                                             <div class="d-flex flex-column">
@@ -680,7 +782,8 @@
                                                     <div class="col mb-3">
                                                         <div class="d-flex flex-column justify-content-center h-100">
                                                             <p class="text-gray font-1">
-                                                                " Transformative designs that perfectly blend style and practicality. "
+                                                                " Transformative designs that perfectly blend style and
+                                                                practicality. "
                                                             </p>
                                                             <div class="divider mb-4"></div>
                                                             <div class="d-flex flex-column">
@@ -709,23 +812,25 @@
                                         <!-- Additional required wrapper -->
                                         <div class="swiper-wrapper">
                                             <!-- Slides -->
-                                            <div class="swiper-slide"><img src="image/P1.jpg" alt=""
-                                                    class="img-fluid"></div>
-                                            <div class="swiper-slide"><img src="image/P2.jpg" alt=""
-                                                    class="img-fluid"></div>
-                                            <div class="swiper-slide"><img src="image/P3.jpg" alt=""
-                                                    class="img-fluid"></div>
-                                            <div class="swiper-slide"><img src="image/P4.jpg" alt=""
-                                                    class="img-fluid"></div>
-                                            <div class="swiper-slide"><img src="image/P5.jpg" alt=""
-                                                    class="img-fluid"></div>
-                                            <div class="swiper-slide"><img src="image/P6.jpg" alt=""
-                                                    class="img-fluid"></div>
+                                            <div class="swiper-slide"><img src="image/P1.jpg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="swiper-slide"><img src="image/P2.jpg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="swiper-slide"><img src="image/P3.jpg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="swiper-slide"><img src="image/P4.jpg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="swiper-slide"><img src="image/P5.jpg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="swiper-slide"><img src="image/P6.jpg" alt="" class="img-fluid">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <p class="text-gray">
-                                    We collaborate with trusted partners who share our commitment to quality, innovation, and excellence. Together, we deliver exceptional results that transform spaces and exceed client expectations.
+                                    We collaborate with trusted partners who share our commitment to quality,
+                                    innovation, and excellence. Together, we deliver exceptional results that transform
+                                    spaces and exceed client expectations.
                                 </p>
                             </div>
                         </div>
@@ -752,9 +857,10 @@
                                 </div>
                             </div>
                             <p class="text-gray font-1">
-                                Feel free to reach out with any questions or inquiries. We’re here to help and guide you through your next design project.
+                                Feel free to reach out with any questions or inquiries. We’re here to help and guide you
+                                through your next design project.
                             </p>
-                            
+
                             <iframe loading="lazy" class="maps shadow shadow-lg"
                                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3504.822240032141!2d77.54011617549759!3d28.545062275712652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDMyJzQyLjIiTiA3N8KwMzInMzMuNyJF!5e0!3m2!1sen!2sin!4v1732855633156!5m2!1sen!2sin"
                                 title="StyleGrid, Dadri, Eskort Colony, G. B. Nagar, U.P"
@@ -818,7 +924,8 @@
                                         placeholder="Message"></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <button type="submit" class="btn rounded-0 submit_form font-1 py-3" onclick="sendMail()">
+                                    <button type="submit" class="btn rounded-0 submit_form font-1 py-3"
+                                        onclick="sendMail()">
                                         SUBMIT
                                     </button>
                                 </div>
@@ -839,10 +946,13 @@
                     <div class="col mb-3">
                         <div class="d-flex flex-column gap-3">
                             <div class="logo-container">
-                                <img src="image/logo.png" alt="" class="img-fluid">
+                                <img src="image/logo1.png" alt="" class="img-fluid">
                             </div>
                             <p class="text-gray">
-                                At Stylegrid, we focus on creating spaces that are not only aesthetically pleasing but also highly functional. Our team combines innovative design with precision to craft environments that are tailored to your needs, ensuring your space truly feels like home or an inspiring work environment.
+                                At Stylegrid, we focus on creating spaces that are not only aesthetically pleasing but
+                                also highly functional. Our team combines innovative design with precision to craft
+                                environments that are tailored to your needs, ensuring your space truly feels like home
+                                or an inspiring work environment.
                             </p>
                         </div>
                     </div>
@@ -871,8 +981,8 @@
                                             <!-- Additional required wrapper -->
                                             <div class="swiper-wrapper">
                                                 <!-- Slides -->
-                                                <div class="swiper-slide"><img src="image/footer-img-600x400.jpg"
-                                                        alt="" class="img-fluid"></div>
+                                                <div class="swiper-slide"><img src="image/footer-img-600x400.jpg" alt=""
+                                                        class="img-fluid"></div>
                                                 <div class="swiper-slide"><img src="image/footer-img-600x400-1.jpg"
                                                         alt="" class="img-fluid"></div>
                                                 <div class="swiper-slide"><img src="image/footer-img-600x400-2.jpg"
@@ -888,8 +998,8 @@
                                             <!-- Additional required wrapper -->
                                             <div class="swiper-wrapper">
                                                 <!-- Slides -->
-                                                <div class="swiper-slide"><img src="image/dummy-img-600x400.jpg"
-                                                        alt="" class="img-fluid"></div>
+                                                <div class="swiper-slide"><img src="image/dummy-img-600x400.jpg" alt=""
+                                                        class="img-fluid"></div>
                                                 <div class="swiper-slide"><img src="image/dummy-img-600x400-1.jpg"
                                                         alt="" class="img-fluid"></div>
                                                 <div class="swiper-slide"><img src="image/dummy-img-600x400-2.jpg"
@@ -907,14 +1017,15 @@
         </section>
         <section class="bg-dark-color py-4">
             <div class="r-container">
-                <div class="d-flex flex-lg-row flex-column justify-content-center text-center justify-content-between gap-3">
+                <div
+                    class="d-flex flex-lg-row flex-column justify-content-center text-center justify-content-between gap-3">
                     <span class="text-white">
                         Copyright 2024 © StyleGrid
                     </span>
                     <div class="d-flex justify-content-center flex-row gap-3">
-                        <a href="https://www.facebook.com" class="accent-color">Facebook</a>
-                        <a href="https://www.instagramcom" class="accent-color">Instagram</a>
-                        <a href="https://www.pinterest.com" class="accent-color">Pinterest</a>
+                        <a href="https://www.facebook.com/profile.php?id=61570432591342" class="accent-color">Facebook</a>
+                        <a href="https://www.instagram.com/stylegridspace/" class="accent-color">Instagram</a>
+                        <a href="https://www.youtube.com/@StyleGrid" class="accent-color">Youtube</a>
                         <a href="#top" class="text-white"><i class="fa-solid fa-arrow-up"></i></a>
                     </div>
                 </div>
@@ -922,7 +1033,6 @@
         </section>
     </footer>
 
-    <script src="js/vendor/fslightbox.js"></script>
 </body>
 
 </html>
